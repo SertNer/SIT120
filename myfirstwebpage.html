@@ -19,28 +19,37 @@
     
     <h3>List Your Best NBA Players</h3>
     
-    <table border="1">
+    <table>
         <tr>
-            <td table="true">First Name</td>
-            <td table="true">Last Name</td>
+            <td><input type="text" value="First Name"></td>
+            <td><input type="text" value="Last Name"></td>
         </tr>
         <tr>
-            <td table="true">First Name</td>
-            <td table="true">Last Name</td>
+            <td><input type="text" value="First Name"></td>
+            <td><input type="text" value="Last Name"></td>
         </tr>
         <tr>
-            <td table="true">First Name</td>
-            <td table="true">Last Name</td>
+            <td><input type="text" value="First Name"></td>
+            <td><input type="text" value="Last Name"></td>
         </tr>
     </table>
 
-    <form action="/action_page.php">
+    <form action="" onsubmit="return showThankYou();">
         <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname" value="Your"><br>
+        <input type="text" id="fname" name="fname"><br>
         <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname" value="Name"><br><br>
+        <input type="text" id="lname" name="lname"><br><br>
         <input type="submit" value="Submit">
     </form>
+
+    <p id="thankYouText" style="display: none; font-weight: bold;">Thank you for submitting!</p>
+
+    <script>
+        function showThankYou() {
+            document.getElementById("thankYouText").style.display = "block";
+            return false;
+        }
+    </script>
 </body>
 
 </html>
